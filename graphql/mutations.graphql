@@ -1,0 +1,412 @@
+# this is an auto generated file. This will be overwritten
+
+mutation CreateUser(
+  $input: CreateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  createUser(input: $input, condition: $condition) {
+    id
+    email
+    name
+    city
+    profilePicture
+    phoneNumber
+    createdAt
+    updatedAt
+    events {
+      nextToken
+      __typename
+    }
+    classifieds {
+      nextToken
+      __typename
+    }
+    businesses {
+      nextToken
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation UpdateUser(
+  $input: UpdateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  updateUser(input: $input, condition: $condition) {
+    id
+    email
+    name
+    city
+    profilePicture
+    phoneNumber
+    createdAt
+    updatedAt
+    events {
+      nextToken
+      __typename
+    }
+    classifieds {
+      nextToken
+      __typename
+    }
+    businesses {
+      nextToken
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation DeleteUser(
+  $input: DeleteUserInput!
+  $condition: ModelUserConditionInput
+) {
+  deleteUser(input: $input, condition: $condition) {
+    id
+    email
+    name
+    city
+    profilePicture
+    phoneNumber
+    createdAt
+    updatedAt
+    events {
+      nextToken
+      __typename
+    }
+    classifieds {
+      nextToken
+      __typename
+    }
+    businesses {
+      nextToken
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation CreateEvent(
+  $input: CreateEventInput!
+  $condition: ModelEventConditionInput
+) {
+  createEvent(input: $input, condition: $condition) {
+    id
+    title
+    description
+    date
+    city
+    category
+    location
+    price
+    imageUrl
+    contactInfo
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation UpdateEvent(
+  $input: UpdateEventInput!
+  $condition: ModelEventConditionInput
+) {
+  updateEvent(input: $input, condition: $condition) {
+    id
+    title
+    description
+    date
+    city
+    category
+    location
+    price
+    imageUrl
+    contactInfo
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation DeleteEvent(
+  $input: DeleteEventInput!
+  $condition: ModelEventConditionInput
+) {
+  deleteEvent(input: $input, condition: $condition) {
+    id
+    title
+    description
+    date
+    city
+    category
+    location
+    price
+    imageUrl
+    contactInfo
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation CreateClassified(
+  $input: CreateClassifiedInput!
+  $condition: ModelClassifiedConditionInput
+) {
+  createClassified(input: $input, condition: $condition) {
+    id
+    title
+    description
+    category
+    city
+    price
+    contactInfo
+    imageUrl
+    expiryDate
+    isActive
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation UpdateClassified(
+  $input: UpdateClassifiedInput!
+  $condition: ModelClassifiedConditionInput
+) {
+  updateClassified(input: $input, condition: $condition) {
+    id
+    title
+    description
+    category
+    city
+    price
+    contactInfo
+    imageUrl
+    expiryDate
+    isActive
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation DeleteClassified(
+  $input: DeleteClassifiedInput!
+  $condition: ModelClassifiedConditionInput
+) {
+  deleteClassified(input: $input, condition: $condition) {
+    id
+    title
+    description
+    category
+    city
+    price
+    contactInfo
+    imageUrl
+    expiryDate
+    isActive
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation CreateBusiness(
+  $input: CreateBusinessInput!
+  $condition: ModelBusinessConditionInput
+) {
+  createBusiness(input: $input, condition: $condition) {
+    id
+    name
+    category
+    city
+    address
+    phoneNumber
+    email
+    website
+    description
+    rating
+    imageUrl
+    hours
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation UpdateBusiness(
+  $input: UpdateBusinessInput!
+  $condition: ModelBusinessConditionInput
+) {
+  updateBusiness(input: $input, condition: $condition) {
+    id
+    name
+    category
+    city
+    address
+    phoneNumber
+    email
+    website
+    description
+    rating
+    imageUrl
+    hours
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+mutation DeleteBusiness(
+  $input: DeleteBusinessInput!
+  $condition: ModelBusinessConditionInput
+) {
+  deleteBusiness(input: $input, condition: $condition) {
+    id
+    name
+    category
+    city
+    address
+    phoneNumber
+    email
+    website
+    description
+    rating
+    imageUrl
+    hours
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}

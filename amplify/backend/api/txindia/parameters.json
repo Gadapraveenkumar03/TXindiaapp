@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "txindia",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authtxindia0a9943e4",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

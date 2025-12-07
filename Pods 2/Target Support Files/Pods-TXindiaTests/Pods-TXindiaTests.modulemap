@@ -1,0 +1,6 @@
+framework module Pods_TXindiaTests {
+  umbrella header "Pods-TXindiaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

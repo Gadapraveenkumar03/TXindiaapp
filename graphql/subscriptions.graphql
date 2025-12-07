@@ -1,0 +1,412 @@
+# this is an auto generated file. This will be overwritten
+
+subscription OnCreateUser(
+  $filter: ModelSubscriptionUserFilterInput
+  $owner: String
+) {
+  onCreateUser(filter: $filter, owner: $owner) {
+    id
+    email
+    name
+    city
+    profilePicture
+    phoneNumber
+    createdAt
+    updatedAt
+    events {
+      nextToken
+      __typename
+    }
+    classifieds {
+      nextToken
+      __typename
+    }
+    businesses {
+      nextToken
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateUser(
+  $filter: ModelSubscriptionUserFilterInput
+  $owner: String
+) {
+  onUpdateUser(filter: $filter, owner: $owner) {
+    id
+    email
+    name
+    city
+    profilePicture
+    phoneNumber
+    createdAt
+    updatedAt
+    events {
+      nextToken
+      __typename
+    }
+    classifieds {
+      nextToken
+      __typename
+    }
+    businesses {
+      nextToken
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteUser(
+  $filter: ModelSubscriptionUserFilterInput
+  $owner: String
+) {
+  onDeleteUser(filter: $filter, owner: $owner) {
+    id
+    email
+    name
+    city
+    profilePicture
+    phoneNumber
+    createdAt
+    updatedAt
+    events {
+      nextToken
+      __typename
+    }
+    classifieds {
+      nextToken
+      __typename
+    }
+    businesses {
+      nextToken
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateEvent(
+  $filter: ModelSubscriptionEventFilterInput
+  $owner: String
+) {
+  onCreateEvent(filter: $filter, owner: $owner) {
+    id
+    title
+    description
+    date
+    city
+    category
+    location
+    price
+    imageUrl
+    contactInfo
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateEvent(
+  $filter: ModelSubscriptionEventFilterInput
+  $owner: String
+) {
+  onUpdateEvent(filter: $filter, owner: $owner) {
+    id
+    title
+    description
+    date
+    city
+    category
+    location
+    price
+    imageUrl
+    contactInfo
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteEvent(
+  $filter: ModelSubscriptionEventFilterInput
+  $owner: String
+) {
+  onDeleteEvent(filter: $filter, owner: $owner) {
+    id
+    title
+    description
+    date
+    city
+    category
+    location
+    price
+    imageUrl
+    contactInfo
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateClassified(
+  $filter: ModelSubscriptionClassifiedFilterInput
+  $owner: String
+) {
+  onCreateClassified(filter: $filter, owner: $owner) {
+    id
+    title
+    description
+    category
+    city
+    price
+    contactInfo
+    imageUrl
+    expiryDate
+    isActive
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateClassified(
+  $filter: ModelSubscriptionClassifiedFilterInput
+  $owner: String
+) {
+  onUpdateClassified(filter: $filter, owner: $owner) {
+    id
+    title
+    description
+    category
+    city
+    price
+    contactInfo
+    imageUrl
+    expiryDate
+    isActive
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteClassified(
+  $filter: ModelSubscriptionClassifiedFilterInput
+  $owner: String
+) {
+  onDeleteClassified(filter: $filter, owner: $owner) {
+    id
+    title
+    description
+    category
+    city
+    price
+    contactInfo
+    imageUrl
+    expiryDate
+    isActive
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateBusiness(
+  $filter: ModelSubscriptionBusinessFilterInput
+  $owner: String
+) {
+  onCreateBusiness(filter: $filter, owner: $owner) {
+    id
+    name
+    category
+    city
+    address
+    phoneNumber
+    email
+    website
+    description
+    rating
+    imageUrl
+    hours
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateBusiness(
+  $filter: ModelSubscriptionBusinessFilterInput
+  $owner: String
+) {
+  onUpdateBusiness(filter: $filter, owner: $owner) {
+    id
+    name
+    category
+    city
+    address
+    phoneNumber
+    email
+    website
+    description
+    rating
+    imageUrl
+    hours
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteBusiness(
+  $filter: ModelSubscriptionBusinessFilterInput
+  $owner: String
+) {
+  onDeleteBusiness(filter: $filter, owner: $owner) {
+    id
+    name
+    category
+    city
+    address
+    phoneNumber
+    email
+    website
+    description
+    rating
+    imageUrl
+    hours
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}

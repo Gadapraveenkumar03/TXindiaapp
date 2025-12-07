@@ -1,0 +1,345 @@
+# this is an auto generated file. This will be overwritten
+
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    email
+    name
+    city
+    profilePicture
+    phoneNumber
+    createdAt
+    updatedAt
+    events {
+      nextToken
+      __typename
+    }
+    classifieds {
+      nextToken
+      __typename
+    }
+    businesses {
+      nextToken
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+query ListUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetEvent($id: ID!) {
+  getEvent(id: $id) {
+    id
+    title
+    description
+    date
+    city
+    category
+    location
+    price
+    imageUrl
+    contactInfo
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+query ListEvents(
+  $filter: ModelEventFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listEvents(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      description
+      date
+      city
+      category
+      location
+      price
+      imageUrl
+      contactInfo
+      createdAt
+      updatedAt
+      userID
+      owner
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query EventsByUserID(
+  $userID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelEventFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  eventsByUserID(
+    userID: $userID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      title
+      description
+      date
+      city
+      category
+      location
+      price
+      imageUrl
+      contactInfo
+      createdAt
+      updatedAt
+      userID
+      owner
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetClassified($id: ID!) {
+  getClassified(id: $id) {
+    id
+    title
+    description
+    category
+    city
+    price
+    contactInfo
+    imageUrl
+    expiryDate
+    isActive
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+query ListClassifieds(
+  $filter: ModelClassifiedFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listClassifieds(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      description
+      category
+      city
+      price
+      contactInfo
+      imageUrl
+      expiryDate
+      isActive
+      createdAt
+      updatedAt
+      userID
+      owner
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query ClassifiedsByUserID(
+  $userID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelClassifiedFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  classifiedsByUserID(
+    userID: $userID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      title
+      description
+      category
+      city
+      price
+      contactInfo
+      imageUrl
+      expiryDate
+      isActive
+      createdAt
+      updatedAt
+      userID
+      owner
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query GetBusiness($id: ID!) {
+  getBusiness(id: $id) {
+    id
+    name
+    category
+    city
+    address
+    phoneNumber
+    email
+    website
+    description
+    rating
+    imageUrl
+    hours
+    createdAt
+    updatedAt
+    userID
+    user {
+      id
+      email
+      name
+      city
+      profilePicture
+      phoneNumber
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    owner
+    __typename
+  }
+}
+
+query ListBusinesses(
+  $filter: ModelBusinessFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBusinesses(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      category
+      city
+      address
+      phoneNumber
+      email
+      website
+      description
+      rating
+      imageUrl
+      hours
+      createdAt
+      updatedAt
+      userID
+      owner
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+
+query BusinessesByUserID(
+  $userID: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelBusinessFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  businessesByUserID(
+    userID: $userID
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      category
+      city
+      address
+      phoneNumber
+      email
+      website
+      description
+      rating
+      imageUrl
+      hours
+      createdAt
+      updatedAt
+      userID
+      owner
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}

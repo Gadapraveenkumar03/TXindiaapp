@@ -1,0 +1,116 @@
+type User @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  email: String!
+  name: String!
+  city: City!
+  profilePicture: String
+  phoneNumber: String
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  
+  # Relationships
+  events: [Event] @hasMany(indexName: "byUser", fields: ["id"])
+  classifieds: [Classified] @hasMany(indexName: "byUser", fields: ["id"])
+  businesses: [Business] @hasMany(indexName: "byUser", fields: ["id"])
+}
+
+type Event @model @auth(rules: [
+  {allow: owner},
+  {allow: public, operations: [read]}
+]) {
+  id: ID!
+  title: String!
+  description: String!
+  date: AWSDateTime!
+  city: City!
+  category: EventCategory!
+  location: String!
+  price: Float
+  imageUrl: String
+  contactInfo: String
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  
+  # Owner relationship
+  userID: ID! @index(name: "byUser")
+  user: User @belongsTo(fields: ["userID"])
+}
+
+type Classified @model @auth(rules: [
+  {allow: owner},
+  {allow: public, operations: [read]}
+]) {
+  id: ID!
+  title: String!
+  description: String!
+  category: ClassifiedCategory!
+  city: City!
+  price: Float
+  contactInfo: String!
+  imageUrl: String
+  expiryDate: AWSDateTime!
+  isActive: Boolean!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  
+  # Owner relationship
+  userID: ID! @index(name: "byUser")
+  user: User @belongsTo(fields: ["userID"])
+}
+
+type Business @model @auth(rules: [
+  {allow: owner},
+  {allow: public, operations: [read]}
+]) {
+  id: ID!
+  name: String!
+  category: BusinessCategory!
+  city: City!
+  address: String!
+  phoneNumber: String!
+  email: String
+  website: String
+  description: String
+  rating: Float
+  imageUrl: String
+  hours: String
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  
+  # Owner relationship
+  userID: ID! @index(name: "byUser")
+  user: User @belongsTo(fields: ["userID"])
+}
+
+enum City {
+  DALLAS
+  HOUSTON
+  AUSTIN
+  SAN_ANTONIO
+  CORPUS_CHRISTI
+}
+
+enum EventCategory {
+  RELIGIOUS
+  CULTURAL
+  PROFESSIONAL
+  KIDS
+  ONLINE
+}
+
+enum ClassifiedCategory {
+  JOBS
+  RENTALS
+  BUY_SELL
+  SERVICES
+  MATRIMONY
+}
+
+enum BusinessCategory {
+  RESTAURANT
+  GROCERY
+  TEMPLE
+  MEDICAL
+  SERVICES
+  EDUCATION
+}
